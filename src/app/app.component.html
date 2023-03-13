@@ -1,1 +1,3 @@
-<ckeditor [editor]="Editor" data="<p>Hello, world!</p>"></ckeditor>
+<ckeditor [editor]="Editor"
+          [config]="{exportPdf: exportPdfConfig, placeholder: 'Enter something to write'}"
+          [(ngModel)]="model.editorData"></ckeditor>
