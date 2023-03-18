@@ -1,4 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  background: var(--light-color-shade);
+  color: var(--dark-color-shade) !important;
+  font-size: 15px;
+}
+
 .ck-editor__editable_inline {
   min-height: 400px;
+}
+.nav-pills {
+  border: 2px solid var(--warning-color-shade) !important;
+}
+.nav-pills .nav-link {
+  color: var(--dark-color-shade) !important;
+  border-radius: 0;
+}
+.nav-pills .nav-link.active {
+  background-color: var(--warning-color-shade) !important;
 }
