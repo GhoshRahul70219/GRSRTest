@@ -1,0 +1,33 @@
+<div class="modal fade"
+  bsModal #managePointModal="bs-modal"
+  [config]="{ backdrop: true, ignoreBackdropClick: true }">
+  <div class="modal-dialog shadow-lg">
+    <div class="modal-content rounded-0 border-0 p-4">
+      <div class="modal-header border-0 py-0 pt-3 position-relative">
+        <h5 class="fw-bold mb-0">Add New GR Point</h5>
+        <i class="fa fa-close cursor-pointer position-absolute right-0 top-0 text--size-20 text-grey"
+           (click)="closeModal()"></i>
+      </div>
+
+      <div class="modal-body pb-0">
+        <div class="mb-3">
+          <small class="form-label d-block text-secondary">Enter GR point no.</small>
+          <input [(ngModel)]="editorData.point" type="text" class="form-control" placeholder="e.g. 15.09">
+          <small class="form-text text-danger"></small>
+        </div>
+
+        <div class="mb-3">
+          <small class="form-label d-block text-secondary">GR point description</small>
+          <ckeditor debounce="300" [editor]="Editor"
+                    [config]="{toolbar: ['bold', 'italic', 'underline', 'fontSize', 'fontFamily']}"
+                    [(ngModel)]="editorData.headline"></ckeditor>
+        </div>
+
+        <div class="d-flex justify-content-end">
+          <button class="btn btn-success fw-bold">Save Details</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

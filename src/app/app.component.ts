@@ -8,7 +8,9 @@ import Editor from 'ckeditor5-custom-build/build/ckeditor';
 })
 export class AppComponent {
   title = 'GRSR';
+  managePointForm: any = false;
   public Editor = Editor;
+
   public exportPdfConfig = {
     stylesheets: [ 'EDITOR_STYLES' ],
     fileName: 'document.pdf',
@@ -26,8 +28,14 @@ export class AppComponent {
       wait_for_network: true,
       wait_time: 0
     }
-  }
+  };
   public model = {
     editorData: "<p>Hello, world!</p>"
   };
+
+  setPointModalData = (event) => {
+    this.managePointForm = false;
+  }
+
+
 }

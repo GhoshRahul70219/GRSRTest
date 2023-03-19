@@ -13,9 +13,9 @@ html {
   font-size: 16px;
 }
 
-.ck-editor__editable_inline {
-  min-height: 400px;
-}
+/*.ck-editor__editable_inline {*/
+  /*min-height: 400px;*/
+/*}*/
 .nav-pills {
   border: 2px solid var(--warning-color-shade) !important;
 }

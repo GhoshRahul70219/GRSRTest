@@ -13,7 +13,7 @@
       </button>
       <ul *dropdownMenu class="dropdown-menu shadow border-light">
         <li>
-          <a class="dropdown-item d-inline-flex text-theme-primary fw-bold" href="#">
+          <a class="dropdown-item d-inline-flex text-theme-primary fw-bold" (click)="managePointForm = true">
             <i class="fas fa-plus my-auto me-2"></i>
             Add New GR
           </a>
@@ -221,3 +221,5 @@
     </article>
   </section>
 </div>
+
+<app-manage-point [managePointForm]="managePointForm" (setPointModalData)="setPointModalData($event)"></app-manage-point>

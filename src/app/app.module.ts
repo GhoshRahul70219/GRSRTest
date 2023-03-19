@@ -8,11 +8,16 @@ import { HeaderComponent } from './components/header/header.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import { ManageContentComponent } from './components/manage-content/manage-content.component';
+import { ManagePointComponent } from './components/manage-point/manage-point.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    ManageContentComponent,
+    ManagePointComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +27,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
     BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
