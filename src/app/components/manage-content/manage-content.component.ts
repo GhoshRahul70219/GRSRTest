@@ -14,6 +14,9 @@ export class ManageContentComponent implements OnChanges {
   @ViewChild('manageContentModal') private manageContentModal: ModalDirective;
 
   public Editor = Editor;
+  editorData: any = '';
+
+  constructor() {}
 
   ngOnChanges(): void {
     if (this.manageContentForm.sectionId) {

@@ -5,11 +5,23 @@
   [config]="{ backdrop: true, ignoreBackdropClick: true }"
 >
   <div class="modal-dialog position-fixed right-0 m-0 shadow-lg" style="max-width: max-content">
-    <div class="modal-content vh-100 rounded-0 border-0 p-4 overflow-auto">
-      <div class="modal-header border-0 py-0 pt-3 position-relative">
-        <h5 class="fw-bold mb-0">{{manageContentForm.sectionId === 'new' ? 'Add New' : 'Modify'}} GR Section</h5>
-        <i class="fa fa-close cursor-pointer position-absolute right-0 top-0 text--size-20 text-grey"
+    <div class="modal-content vh-100 rounded-0 border-0 px-4 pt-4 overflow-auto">
+      <div class="modal-header border-0 py-2 position-relative">
+        <h5 class="fw-bold mb-0">
+          {{manageContentForm.sectionId === 'new' ? 'Add New' : 'Modify'}} {{manageContentForm.type}} Section
+        </h5>
+        <i class="fa fa-close cursor-pointer position-absolute top-0 text--size-22 text-grey" style="right: 10px"
            (click)="closeModal()"></i>
+      </div>
+
+      <div class="modal-body">
+        <ckeditor debounce="300" [editor]="Editor"
+                  [config]="{placeholder: 'Enter something to write'}"
+                  [(ngModel)]="editorData"></ckeditor>
+      </div>
+
+      <div class="modal-footer d-flex justify-content-end">
+        <button class="btn btn-success fw-bold btn-lg">Save Details</button>
       </div>
     </div>
   </div>
