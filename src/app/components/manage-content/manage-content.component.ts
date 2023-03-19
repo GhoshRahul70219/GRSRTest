@@ -16,7 +16,7 @@ export class ManageContentComponent implements OnChanges {
   public Editor = Editor;
 
   ngOnChanges(): void {
-    if (this.manageContentForm.type) {
+    if (this.manageContentForm.sectionId) {
       this.manageContentModal.show();
     }
   }

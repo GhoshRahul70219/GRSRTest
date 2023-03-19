@@ -28,3 +28,7 @@ html {
   background-color: var(--warning-color-shade) !important;
   box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important
 }
+
+.dropdown-shift {
+  left: -140px !important;
+}

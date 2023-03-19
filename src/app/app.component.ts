@@ -51,29 +51,31 @@ export class AppComponent implements OnInit {
    * Set content data (GR/SR)
    * @param data
    */
-  setContentModalData = (data) => {
-    this.settings.manageContentForm = {sectionId: 'new', type: this.settings.sectionTabType};
+  setContentModalData = (data?) => {
+    this.settings.manageContentForm = {sectionId: '', type: this.settings.sectionTabType};
   }
 
   /**
    *
    * @param sectionId
    */
-  setManageContentFormData = (sectionId?) => {
-    this.settings.manageContentForm = {...this.settings.manageContentForm, sectionId: sectionId};
-  }
+  setContentFormData = (sectionId?) => {
+    this.settings.manageContentForm = {
+      ...this.settings.manageContentForm,
+      sectionId: sectionId || 'new',
+      type: this.settings.sectionTabType
+    };
+  };
 
   /**
    * Set GR Point data for modal
    * @param pointId
    */
   setPointFormData = (pointId?) => {
-    this.settings = {
-      ...this.settings,
-      managePointForm: {
-        ...this.settings.managePointForm,
-        pointId : pointId || 'new'
-      }
-    }
-  }
+    this.settings.managePointForm = {
+      ...this.settings.managePointForm,
+      pointId : pointId || 'new',
+      type: this.settings.sectionTabType
+    };
+  };
 }

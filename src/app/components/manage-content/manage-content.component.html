@@ -1,13 +1,15 @@
 <div
-  class="modal fade side-sheet-modal-sm animate__animated animate__slideInRight"
+  class="modal fade side-sheet-modal-xl animate__animated animate__slideInRight"
   bsModal
   #manageContentModal="bs-modal"
   [config]="{ backdrop: true, ignoreBackdropClick: true }"
 >
   <div class="modal-dialog position-fixed right-0 m-0 shadow-lg" style="max-width: max-content">
     <div class="modal-content vh-100 rounded-0 border-0 p-4 overflow-auto">
-      <div class="modal-header border-0 p-0 d-block">
-        {{manageContentForm.type === 'new' ? 'Add' : 'Edit'}}
+      <div class="modal-header border-0 py-0 pt-3 position-relative">
+        <h5 class="fw-bold mb-0">{{manageContentForm.sectionId === 'new' ? 'Add New' : 'Modify'}} GR Section</h5>
+        <i class="fa fa-close cursor-pointer position-absolute right-0 top-0 text--size-20 text-grey"
+           (click)="closeModal()"></i>
       </div>
     </div>
   </div>
