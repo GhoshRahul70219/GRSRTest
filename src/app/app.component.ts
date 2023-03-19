@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import Editor from 'ckeditor5-custom-build/build/ckeditor';
 
 @Component({
@@ -6,9 +6,13 @@ import Editor from 'ckeditor5-custom-build/build/ckeditor';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'GRSR';
-  managePointForm: any = false;
+export class AppComponent implements OnInit {
+  settings: any = {
+    managePointForm: { pointId: '' },
+    manageContentForm: { sectionId: '', type: ''},
+    sectionTabType: 'GR'
+  };
+
   public Editor = Editor;
 
   public exportPdfConfig = {
@@ -33,9 +37,43 @@ export class AppComponent {
     editorData: "<p>Hello, world!</p>"
   };
 
-  setPointModalData = (event) => {
-    this.managePointForm = false;
+  ngOnInit(): void {}
+
+  /**
+   * Set GR point data in modal
+   * @param data
+   */
+  setPointModalData = (data) => {
+    this.settings.managePointForm =  data;
   }
 
+  /**
+   * Set content data (GR/SR)
+   * @param data
+   */
+  setContentModalData = (data) => {
+    this.settings.manageContentForm = {sectionId: 'new', type: this.settings.sectionTabType};
+  }
 
+  /**
+   *
+   * @param sectionId
+   */
+  setManageContentFormData = (sectionId?) => {
+    this.settings.manageContentForm = {...this.settings.manageContentForm, sectionId: sectionId};
+  }
+
+  /**
+   * Set GR Point data for modal
+   * @param pointId
+   */
+  setPointFormData = (pointId?) => {
+    this.settings = {
+      ...this.settings,
+      managePointForm: {
+        ...this.settings.managePointForm,
+        pointId : pointId || 'new'
+      }
+    }
+  }
 }

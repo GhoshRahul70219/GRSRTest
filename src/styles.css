@@ -22,6 +22,7 @@ html {
 .nav-pills .nav-link {
   color: var(--dark-color-shade) !important;
   border-radius: 0;
+  background: var(--white-color);
 }
 .nav-pills .nav-link.active {
   background-color: var(--warning-color-shade) !important;

@@ -13,7 +13,8 @@
       </button>
       <ul *dropdownMenu class="dropdown-menu shadow border-light">
         <li>
-          <a class="dropdown-item d-inline-flex text-theme-primary fw-bold" (click)="managePointForm = true">
+          <a class="dropdown-item d-inline-flex text-theme-primary fw-bold cursor-pointer"
+             (click)="setPointFormData()">
             <i class="fas fa-plus my-auto me-2"></i>
             Add New GR
           </a>
@@ -37,21 +38,24 @@
         <i class="fa-solid fa-file-pdf my-auto text-danger me-1"></i>
         View as PDF
       </span>
-      <span class="d-inline-flex my-auto mx-4 fw-bold cursor-pointer">
+      <span class="d-inline-flex my-auto mx-4 fw-bold cursor-pointer" (click)="setPointFormData(2)">
         <i class="fa-solid fa-pen my-auto text-theme-primary me-1"></i>
         Edit Point
       </span>
       <div class="d-flex my-auto">
         <label class="my-auto me-2 fw-bold">View By:</label>
         <tabset type="pills">
-          <tab heading="GR" [customClass]="'fw-bold'"></tab>
-          <tab heading="SR" [customClass]="'fw-bold'"></tab>
+          <tab heading="GR" [active]="settings.sectionTabType === 'GR'"
+               (selectTab)="settings.sectionTabType = 'GR'" [customClass]="'fw-bold'"></tab>
+          <tab heading="SR" [active]="settings.sectionTabType === 'SR'"
+               (selectTab)="settings.sectionTabType = 'SR'" [customClass]="'fw-bold'"></tab>
         </tabset>
       </div>
     </div>
   </div>
 
   <section class="mt-4">
+    <!--child 1-->
     <article class="my-4">
       <div class="card border-0 position-relative border-light">
         <div class="card-body p-4">
@@ -71,7 +75,7 @@
           </button>
           <ul *dropdownMenu class="dropdown-menu shadow border-light">
             <li>
-              <a class="dropdown-item d-inline-flex" href="#">
+              <a class="dropdown-item d-inline-flex cursor-pointer" (click)="setManageContentFormData(3)">
                 <small class="fa-solid fa-pencil my-auto text-theme-primary me-2"></small> Edit Note
               </a>
             </li>
@@ -105,6 +109,7 @@
           </ul>
         </div>
       </div>
+      <!--child 2-->
       <article class="ms-4">
         <div class="card my-2 border-0 position-relative border-light">
           <div class="card-body p-4">
@@ -123,7 +128,7 @@
             </button>
             <ul *dropdownMenu class="dropdown-menu shadow border-light">
               <li>
-                <a class="dropdown-item d-inline-flex">
+                <a class="dropdown-item d-inline-flex cursor-pointer" (click)="setManageContentFormData(3)">
                   <small class="fa-solid fa-pencil my-auto text-theme-primary me-2"></small>
                   Edit Note
                 </a>
@@ -163,6 +168,7 @@
             </ul>
           </div>
         </div>
+        <!--child 3-->
         <article class="ms-4">
           <div class="card my-2 border-0 position-relative border-light">
             <div class="card-body p-4">
@@ -182,7 +188,7 @@
               </button>
               <ul *dropdownMenu class="dropdown-menu shadow border-light">
                 <li>
-                  <a class="dropdown-item d-inline-flex" href="#">
+                  <a class="dropdown-item d-inline-flex cursor-pointer" (click)="setManageContentFormData(3)">
                     <small class="fa-solid fa-pencil my-auto text-theme-primary me-2"></small> Edit Note
                   </a>
                 </li>
@@ -222,4 +228,7 @@
   </section>
 </div>
 
-<app-manage-point [managePointForm]="managePointForm" (setPointModalData)="setPointModalData($event)"></app-manage-point>
+<app-manage-point [managePointForm]="settings.managePointForm"
+                  (setPointModalData)="setPointModalData($event)"></app-manage-point>
+<app-manage-content [manageContentForm]="settings.manageContentForm"
+                    (setContentModalData)="setContentModalData($event)"></app-manage-content>

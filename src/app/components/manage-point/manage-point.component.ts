@@ -9,7 +9,7 @@ import Editor from 'ckeditor5-custom-build/build/ckeditor';
 })
 export class ManagePointComponent implements OnChanges {
 
-  @Input() managePointForm: any = '';
+  @Input() managePointForm: any = {};
   @Output() setPointModalData: EventEmitter<any> = new EventEmitter<any>();
   @ViewChild('managePointModal') private managePointModal: ModalDirective;
 
@@ -20,17 +20,15 @@ export class ManagePointComponent implements OnChanges {
   public Editor = Editor;
 
   ngOnChanges(): void {
-    if (!this.managePointForm) {
-      setTimeout(() => {
-        this.managePointModal.show();
-      }, 100);
+    if (this.managePointForm.pointId) {
+      this.managePointModal.show();
     }
   }
 
   // closing modal data with current state and emitting to parent
   closeModal = () => {
     this.managePointModal.hide();
-    this.setPointModalData.emit(this.managePointForm);
+    this.setPointModalData.emit({...this.managePointForm, pointId: ''});
   };
 
 }
