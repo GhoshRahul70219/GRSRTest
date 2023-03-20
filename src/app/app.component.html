@@ -58,14 +58,20 @@
     <!--child 1-->
     <article class="py-4">
       <div class="card border-0 position-relative border-light">
-        <div class="card-body p-4">
-          1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-          It has survived not only five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
-          sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-          Aldus PageMaker including versions of Lorem Ipsum.
+        <div class="card-body px-4 py-3">
+          <small style="top: -5px"
+                 class="rounded-0 position-relative d-inline mb-2 text-warning-dark badge bg-warning-light">
+            <i class="fa-solid fa-inbox my-auto mr-1"></i> In Draft, Last Updated 2 days ago
+          </small>
+          <section>
+            1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            It has survived not only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+            sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
+          </section>
         </div>
         <div class="btn-group my-auto position-absolute" style="top: 50px; right: -20px" dropdown>
           <button dropdownToggle type="button"
@@ -113,13 +119,19 @@
       <article class="ms-4">
         <div class="card my-2 border-0 position-relative border-light">
           <div class="card-body p-4">
-            a. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-            essentially unchanged.
-            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            <small style="top: -5px"
+                   class="rounded-0 d-inline position-relative mb-2 text-theme-primary-dark badge bg-theme-primary-light">
+              <i class="fa-regular fa-hourglass-half my-auto"></i> Approval Awaiting, Last Updated 2 days ago
+            </small>
+            <section>
+              a. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+              when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+              essentially unchanged.
+              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+              and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </section>
           </div>
           <div class="btn-group my-auto position-absolute" style="top: 50px; right: -20px" dropdown>
             <button dropdownToggle type="button"
@@ -172,13 +184,19 @@
         <article class="ms-4">
           <div class="card my-2 border-0 position-relative border-light">
             <div class="card-body p-4">
-              i) Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-              when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-              It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-              essentially unchanged.
-              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-              and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              <small style="top: -5px"
+                     class="rounded-0 d-inline position-relative mb-2 text-danger-dark badge bg-danger-light">
+                <i class="fas fa-times my-auto"></i> Rejected, Last Updated 2 days ago
+              </small>
+              <section>
+                i) Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                essentially unchanged.
+                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              </section>
             </div>
             <div class="btn-group my-auto position-absolute" style="top: 50px; right: -20px" dropdown>
               <button dropdownToggle type="button"
@@ -222,6 +240,128 @@
               </ul>
             </div>
           </div>
+          <!--child 4-->
+          <article class="ms-4">
+            <div class="card my-2 border-0 position-relative border-light">
+              <div class="card-body p-4">
+                <small style="top: -5px"
+                       class="rounded-0 position-relative d-inline mb-2 text-warning-dark badge bg-warning-light">
+                  <i class="fa-solid fa-inbox my-auto mr-1"></i> In Draft, Last Updated 2 days ago
+                </small>
+                <section>
+                  I) Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                  when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                  It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                  essentially unchanged.
+                  It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                  and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </section>
+              </div>
+              <div class="btn-group my-auto position-absolute" style="top: 50px; right: -20px" dropdown>
+                <button dropdownToggle type="button"
+                        class="btn border-theme-primary btn-light rounded-circle bg-theme-primary-light">
+                  <i class="fa-solid fa-ellipsis text--size-15"></i>
+                  <!--<span class="caret my-auto"></span>-->
+                </button>
+                <ul *dropdownMenu class="dropdown-menu shadow border-light dropdown-shift">
+                  <li>
+                    <a class="dropdown-item d-inline-flex cursor-pointer" (click)="setContentFormData(3)">
+                      <small class="fa-solid fa-pencil my-auto text-theme-primary me-2"></small> Edit Note
+                    </a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item d-inline-flex" href="#">
+                      <small class="fa-regular fa-share-from-square my-auto text-theme-primary me-2"></small> Request Update
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item d-inline-flex" href="#">
+                      <small class="fa-regular fa-clock my-auto text-theme-primary me-2"></small> View History
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item d-inline-flex" href="#">
+                      <small class="fa-regular fa-paper-plane my-auto text-theme-primary me-2"></small> Send Approval
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item d-inline-flex cursor-pointer" (click)="setContentFormData()">
+                      <small class="fa-regular fa-square-plus my-auto text-theme-primary me-2"></small> New Sub Point
+                    </a>
+                  </li>
+                  <li class="divider dropdown-divider"></li>
+                  <li>
+                    <a class="dropdown-item text-danger d-inline-flex" href="#">
+                      <small class="fa-regular fa-trash-alt my-auto text-danger me-2"></small> Remove Note
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!--child 5-->
+            <article class="ms-4">
+              <div class="card my-2 border-0 position-relative border-light">
+                <div class="card-body p-4">
+                  <small style="top: -5px"
+                         class="rounded-0 position-relative d-inline mb-2 text-warning-dark badge bg-warning-light">
+                    <i class="fa-solid fa-inbox my-auto mr-1"></i> In Draft, Last Updated 2 days ago
+                  </small>
+                  <section>
+                    1I) Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                    essentially unchanged.
+                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                  </section>
+                </div>
+                <div class="btn-group my-auto position-absolute" [dropup]="true" style="top: 50px; right: -20px" dropdown>
+                  <button dropdownToggle type="button"
+                          class="btn border-theme-primary btn-light rounded-circle bg-theme-primary-light">
+                    <i class="fa-solid fa-ellipsis text--size-15"></i>
+                    <!--<span class="caret my-auto"></span>-->
+                  </button>
+                  <ul *dropdownMenu class="dropdown-menu shadow border-light dropdown-shift">
+                    <li>
+                      <a class="dropdown-item d-inline-flex cursor-pointer" (click)="setContentFormData(3)">
+                        <small class="fa-solid fa-pencil my-auto text-theme-primary me-2"></small> Edit Note
+                      </a>
+                    </li>
+
+                    <li>
+                      <a class="dropdown-item d-inline-flex" href="#">
+                        <small class="fa-regular fa-share-from-square my-auto text-theme-primary me-2"></small> Request Update
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item d-inline-flex" href="#">
+                        <small class="fa-regular fa-clock my-auto text-theme-primary me-2"></small> View History
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item d-inline-flex" href="#">
+                        <small class="fa-regular fa-paper-plane my-auto text-theme-primary me-2"></small> Send Approval
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item d-inline-flex cursor-pointer" (click)="setContentFormData()">
+                        <small class="fa-regular fa-square-plus my-auto text-theme-primary me-2"></small> New Sub Point
+                      </a>
+                    </li>
+                    <li class="divider dropdown-divider"></li>
+                    <li>
+                      <a class="dropdown-item text-danger d-inline-flex" href="#">
+                        <small class="fa-regular fa-trash-alt my-auto text-danger me-2"></small> Remove Note
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </article>
         </article>
       </article>
     </article>
