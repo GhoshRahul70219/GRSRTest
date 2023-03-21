@@ -1,7 +1,6 @@
 import { Component, OnChanges, ViewChild, Output, EventEmitter, Input } from '@angular/core';
 import { ModalDirective } from 'ngx-bootstrap/modal';
 import Editor from 'ckeditor5-custom-build/build/ckeditor';
-
 @Component({
   selector: 'app-manage-content',
   templateUrl: './manage-content.component.html',
@@ -13,7 +12,7 @@ export class ManageContentComponent implements OnChanges {
   @Output() setContentModalData: EventEmitter<any> = new EventEmitter<any>();
   @ViewChild('manageContentModal') private manageContentModal: ModalDirective;
 
-  public Editor = Editor;
+  public editor = Editor;
   editorData: any = '';
 
   constructor() {}
