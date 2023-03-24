@@ -1,0 +1,49 @@
+{
+  "contents": [
+    {
+      "id": 1,
+      "version": "15.09",
+      "description": "some description text",
+      "data": [
+        {
+          "type": "sr",
+          "children": [
+            {
+              "uuid": 1,
+              "content": "<p>data</p>",
+              "status": "draft",
+              "children": [
+                {
+                  "uuid": 2,
+                  "content": "<p>data</p>",
+                  "status": "draft",
+                  "children": [
+                    {
+                      "uuid": 3,
+                      "content": "<p>data</p>",
+                      "status": "draft",
+                      "children": [
+                        {
+                          "uuid": 4,
+                          "content": "<b>ffff</b>",
+                          "status": "draft",
+                          "children": [
+                            {
+                              "uuid": 5,
+                              "content": "<b>ffff</b>",
+                              "status": "draft"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
